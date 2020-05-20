@@ -5,6 +5,7 @@ from django.shortcuts import render
 
 def electronics(request):
     product_dict = {
+        "heading": "Electronics",
         "product1": "Mac",
         "product2": "IPhone",
         "product3": "Dell",
@@ -14,6 +15,7 @@ def electronics(request):
 
 def toys(request):
     product_dict = {
+        "heading": "Toys",
         "product1": "Remote Car",
         "product2": "Drone",
         "product3": "Rocket Launcher",
@@ -23,6 +25,7 @@ def toys(request):
 
 def shoes(request):
     product_dict = {
+        "heading": "Shoes",
         "product1": "Nike",
         "product2": "Adidas",
         "product3": "Reebok",

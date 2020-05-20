@@ -1,13 +1,58 @@
 <!DOCTYPE html>
 {% load static %}
 <html>
-  <head> </head>
+  <head>
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="{% static "css/style.css" %}"/>
+  </head>
+
   <body>
     <h1>{{heading}}</h1>
+    {% if heading == "Electronics" %}
+      <img src="{% static "images/electronics.jpeg"%}"/>
+    {% elif heading == "Toys" %}
+      <img src="{% static "images/toys.jpeg"%}"/>
+    {% elif heading == "Shoes" %}
+      <img src="{% static "images/shoes.jpeg"%}"/> 
+    {% endif %} 
+    <br/>
     <ul>
-      <li>{{product1}}</li>
-      <li>{{product2}}</li>
-      <li>{{product3}}</li>
+      <li>
+        {{product1}}
+        <br/>
+        {% if heading == "Electronics" %}
+          <img src="{% static "images/electronics/product1.jpg"%}"/>
+        {% elif heading == "Toys" %}
+          <img src="{% static "images/toys/product1.jpg"%}"/>
+        {% elif heading == "Shoes" %}
+          <img src="{% static "images/shoes/product1.jpg"%}"/> 
+        {% endif %} 
+        <br/>
+      </li>
+      <li>
+        {{product2}}
+        <br/>
+        {% if heading == "Electronics" %}
+          <img src="{% static "images/electronics/product2.jpg"%}"/>
+        {% elif heading == "Toys" %}
+          <img src="{% static "images/toys/product2.jpg"%}"/>
+        {% elif heading == "Shoes" %}
+          <img src="{% static "images/shoes/product2.jpg"%}"/> 
+        {% endif %} 
+        <br/>
+      </li>
+      <li>
+        {{product3}}
+        <br/>
+        {% if heading == "Electronics" %}
+          <img src="{% static "images/electronics/product3.jpg"%}"/>
+        {% elif heading == "Toys" %}
+          <img src="{% static "images/toys/product3.jpg"%}"/>
+        {% elif heading == "Shoes" %}
+          <img src="{% static "images/shoes/product3.jpg"%}"/> 
+        {% endif %} 
+        <br/>
+      </li>
     </ul>
   </body>
 </html>
