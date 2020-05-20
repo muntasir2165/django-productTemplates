@@ -28,3 +28,7 @@ def shoes(request):
         "product3": "Reebok",
     }
     return render(request, 'productApp/products.html', product_dict)
+
+
+def index(request):
+    return render(request, 'productApp/index.html')
